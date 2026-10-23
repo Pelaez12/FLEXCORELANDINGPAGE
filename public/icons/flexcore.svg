@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="FLEXCORE">
+  <rect width="512" height="512" fill="#080a09"/>
+  <path fill="#fff" d="M96 144h144v48h-96v48h80v48h-80v80H96z"/>
+  <path fill="#ef4444" d="M416 144H304l-48 48v128l48 48h112v-48H324l-20-20v-88l20-20h92z"/>
+</svg>
