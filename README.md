@@ -33,6 +33,48 @@ Contacto profesional:
 - LinkedIn: https://www.linkedin.com/in/fabrizzio-pelaez-2a29a7429/
 - GitHub: https://github.com/Pelaez12
 
-Este repositorio contiene por ahora los activos de identidad y el alcance.
-La landing y su despliegue todavía no están implementados. No modifica el
-sitio del gimnasio, la aplicación FLEXQR ni Google Auth.
+## Landing implementada
+
+React + Vite + Motion, con identidad negro/blanco/rojo, intro de 6.7 segundos
+inspirada en FLEXQR y transición a «¿Qué necesita tu negocio?». Se muestra en la
+primera visita por navegador, puede saltarse y respeta movimiento reducido.
+Para probarla otra vez durante QA, abre `/?intro=1`.
+
+Incluye servicios interactivos, planes de chatbot, adicional de promociones push,
+perfil profesional, preguntas frecuentes y solicitudes por WhatsApp. Los ejemplos
+de producto están etiquetados como ilustrativos, no muestran datos reales.
+
+```sh
+npm ci
+npm run dev
+npm test
+npm run build
+npm run preview
+```
+
+El resultado publicable es `dist/`. En un alojamiento estático de Cloudflare,
+configura la compilación `npm run build` y el directorio de salida `dist`.
+No publiques los archivos fuente directamente ni despliegues sin compilar.
+Este repositorio no crea infraestructura, dominios ni modifica otros proyectos.
+
+## Contacto y privacidad
+
+El teléfono comercial se configura en `src/contact.js` y se muestra también en
+la página. El formulario valida los campos y prepara un mensaje; solo abre
+WhatsApp cuando la persona pulsa el enlace correspondiente. No envía mensajes
+automáticamente, no confirma citas, no procesa pagos y no almacena solicitudes.
+La fuente Manrope se solicita a Google Fonts; no se incluyen analíticas ni cookies
+de seguimiento. El almacenamiento local guarda únicamente que la intro ya se vio.
+
+Los precios y límites provienen del brief del propietario. El volumen incluido del
+chatbot, implementación, integraciones, impuestos aplicables y condiciones finales
+se deben confirmar antes de contratar. No se promete consumo ilimitado.
+
+## Validación
+
+Pruebas unitarias de campos, consentimiento, contenido y codificación del mensaje.
+Verificación visual de escritorio y de diseño responsive a 390px. No se enviaron
+mensajes reales. La recepción en WhatsApp depende de la cuenta destinataria y no
+se puede certificar con una prueba local del enlace.
+
+No modifica el sitio del gimnasio, la aplicación FLEXQR ni Google Auth.
